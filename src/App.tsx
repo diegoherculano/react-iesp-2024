@@ -1,12 +1,18 @@
-import './App.css'
 import FirstExample from './FirstExample'
 import TodoList from './TodoList'
+import {Link, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <FirstExample/>
-      <TodoList/>
+      <nav style={{marginBottom: 30, display: 'flex', flexDirection: 'row', gap:10}}>
+        <Link to={'/'}>First Example</Link>
+        <Link to={'/todo-list'}>Todo List</Link>
+      </nav>
+      <Routes>
+        <Route path={'/:id'} element={<FirstExample/>}/>
+        <Route path={'/todo-list'} element={<TodoList/>}/>
+      </Routes>
     </div>
   )
 }
