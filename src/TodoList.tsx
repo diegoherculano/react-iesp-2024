@@ -26,6 +26,8 @@ function TodoList() {
 
   // criar um estado para armazenar a tarefa atual
   // criar uma função para editar uma tarefa
+
+  // Integração com a API nestjs
   return (
     <div style={{display: 'flex', flexDirection: 'column'}}> 
       <div style={{display: "flex", flexDirection: 'row', gap: 10}}>
